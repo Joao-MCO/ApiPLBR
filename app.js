@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const key = 'test85g57'
-const idLiga = 4759
+const idLiga = 7704
 
 app.get('/', (req, res) => {
 	url = 'https://api.football-data-api.com/league-season?key=' + key + '&season_id=' + idLiga
