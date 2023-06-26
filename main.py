@@ -1,8 +1,7 @@
 import requests
 import Liga
-import customtkinter as ctk
 import UI
-      
+
 api = "http://localhost:3000/"
 res = requests.get(api)
 

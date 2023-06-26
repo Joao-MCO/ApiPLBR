@@ -14,6 +14,12 @@ class Liga:
         self.impedimentos = liga['offsidesAVG_overall']
         self.numeroJogadores = liga['player_count']
         self.ambosMarcam = liga['btts_matches']
+        self.artilheiro = liga['top_scorers'][0]['known_as']
+        self.aGols = liga['top_scorers'][0]['goals_overall']
+        self.assistente = liga['top_assists'][0]['known_as']
+        self.aAssistencia = liga['top_assists'][0]['assists_overall']
+        self.topDefesa = liga['top_clean_sheets'][0]['known_as']
+        self.aDefesa = liga['top_clean_sheets'][0]['clean_sheets_overall']
 
 class Mandante:
     def __init__(self, liga):
