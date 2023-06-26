@@ -1,26 +1,21 @@
-import tkinter as tk
+import customtkinter as ctk
 
-class App(tk.Frame):
-    def __init__(self, master):
-        super().__init__(master)
-        self.pack()
+class App:
+    def __init__(self, ovr, man, vis):
+        root = ctk.CTk()
+        root.geometry("640x480")
 
-        self.entrythingy = tk.Entry()
-        self.entrythingy.pack()
+        frame = ctk.CTkFrame(master=root)
+        frame.pack(pady=20, padx=60, fill="both", expand=True)
 
-        # Create the application variable.
-        self.contents = tk.StringVar()
-        # Set it to some value.
-        self.contents.set("this is a variable")
-        # Tell the entry widget to watch this variable.
-        self.entrythingy["textvariable"] = self.contents
+        label = ctk.CTkLabel(master=frame, text=ovr.nome)
+        label.pack(pady=12, padx=10)
 
-        # Define a callback for when the user hits return.
-        # It prints the current value of the variable.
-        self.entrythingy.bind('<Key-Return>',
-                             self.print_contents)
+        
+        root.mainloop()
 
-    def print_contents(self, event):
-        print("Hi. The current entry content is:",
-              self.contents.get())
+
+
+        
+
 

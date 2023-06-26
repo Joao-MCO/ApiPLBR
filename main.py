@@ -1,7 +1,6 @@
 import requests
-import pandas as pd
 import Liga
-import tkinter as tk
+import customtkinter as ctk
 import UI
       
 api = "http://localhost:3000/"
@@ -13,6 +12,4 @@ ovr = Liga.Liga(liga)
 man = Liga.Mandante(liga)
 vis = Liga.Visitante(liga)
 
-root = tk.Tk()
-myapp = UI.App(root)
-myapp.mainloop()
+UI.App(ovr, man, vis)
