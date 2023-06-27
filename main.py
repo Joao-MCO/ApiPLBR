@@ -1,6 +1,12 @@
 import requests
 import Liga
 import UI
+import customtkinter as ctk
+import tkinter as tk
+
+ctk.set_appearance_mode("light")
+ctk.set_default_color_theme("green")
+
 
 ovr = []
 man = []
