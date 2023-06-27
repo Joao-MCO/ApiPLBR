@@ -1,8 +1,11 @@
 import customtkinter as ctk
 
-class Header(ctk.CTkFrame):
+class Header(ctk.CTkScrollableFrame):
     def __init__(self, master, ovr, **kwargs):
         super().__init__(master, **kwargs)
+
+        titulo = ctk.CTkLabel(master=master, text=ovr.nome)
+        titulo.pack(pady=12, padx=10)
 
         aux = "Id " + str(ovr.id)
         id = ctk.CTkLabel(master=master, text=aux)
