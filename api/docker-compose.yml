@@ -1,0 +1,47 @@
+services:
+  node_get_data3000:
+    build: ./app3000
+    command: node app3000.js
+    restart: always
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+
+  node_get_data3001:
+    build: ./app3001
+    command: node app3001.js
+    restart: always
+    expose:
+      - "3001"
+    ports:
+      - "3001:3001"
+
+  node_get_data3002:
+    build: ./app3002
+    command: node app3002.js
+    restart: always
+    expose:
+      - "3002"
+    ports:
+      - "3002:3002"
+
+  node_get_data3003:
+    build: ./app3003
+    command: node app3003.js
+    restart: always
+    expose:
+      - "3003"
+    ports:
+      - "3003:3003"
+    
+  node_get_data3004:
+    build: ./app3004
+    command: node app3004.js
+    restart: always
+    expose:
+      - "3004"
+    ports:
+      - "3004:3004"
+
+
