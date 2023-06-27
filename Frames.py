@@ -1,11 +1,13 @@
 import customtkinter as ctk
 
-class FrameUm(ctk.CTkFrame):
+class FrameUm(ctk.CTkScrollableFrame):
     def __init__(self, master, ovr, **kwargs):
         super().__init__(master, **kwargs)
 
+        titulo = ctk.CTkLabel(master=master, text="Geral")
+        titulo.pack()
         frame = ctk.CTkFrame(master=master)
-        frame.pack(pady=30, padx=60, fill="both", expand=False, anchor="w")
+        frame.pack(pady=30, padx=60, fill="both", expand=True, anchor="w")
 
         frame.grid_rowconfigure(0, weight=1)
         frame.grid_columnconfigure(0, weight=1) 
@@ -50,12 +52,20 @@ class FrameUm(ctk.CTkFrame):
         ambosR = ctk.CTkLabel(master=frame, text=ovr.ambosMarcam)
         ambosR.grid(row=7, column=1, padx=10, pady=5)
 
-class FrameDois(ctk.CTkFrame):
-    def __init__(self, master, ovr, **kwargs):
+class FrameDois(ctk.CTkScrollableFrame):
+    def __init__(self, master, ovr, index ,**kwargs):
         super().__init__(master, **kwargs)
 
+        if(index==1):
+            titulo = ctk.CTkLabel(master=master, text="Mandante")
+        else:
+            titulo = ctk.CTkLabel(master=master, text="Visitante")
+        
+        titulo.pack()
+
+
         frame = ctk.CTkFrame(master=master)
-        frame.pack(pady=30, padx=60, fill="both", expand=False, anchor="w")
+        frame.pack(pady=30, padx=60, fill="both", expand=True, anchor="w")
 
         frame.grid_rowconfigure(0, weight=1)
         frame.grid_columnconfigure(0, weight=1) 
