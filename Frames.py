@@ -1,12 +1,12 @@
 import customtkinter as ctk
 
-class FrameUm(ctk.CTkScrollableFrame):
+class FrameUm(ctk.CTkFrame):
     def __init__(self, master, ovr, **kwargs):
         super().__init__(master, **kwargs)
 
         titulo = ctk.CTkLabel(master=master, text="Geral")
         titulo.pack()
-        frame = ctk.CTkFrame(master=master)
+        frame = ctk.CTkFrame(master=master, width=1280, height=480)
         frame.pack(pady=30, padx=60, fill="both", expand=True, anchor="w")
 
         frame.grid_rowconfigure(0, weight=1)
@@ -52,7 +52,7 @@ class FrameUm(ctk.CTkScrollableFrame):
         ambosR = ctk.CTkLabel(master=frame, text=ovr.ambosMarcam)
         ambosR.grid(row=7, column=1, padx=10, pady=5)
 
-class FrameDois(ctk.CTkScrollableFrame):
+class FrameDois(ctk.CTkFrame):
     def __init__(self, master, ovr, index ,**kwargs):
         super().__init__(master, **kwargs)
 
@@ -64,7 +64,7 @@ class FrameDois(ctk.CTkScrollableFrame):
         titulo.pack()
 
 
-        frame = ctk.CTkFrame(master=master)
+        frame = ctk.CTkFrame(master=master, width=1280, height=480, border_color = "black")
         frame.pack(pady=30, padx=60, fill="both", expand=True, anchor="w")
 
         frame.grid_rowconfigure(0, weight=1)
